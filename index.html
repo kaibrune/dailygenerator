@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+  background-color: #f5f5f5;
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-5">🌤 Daily Template</h1>
+        <hr class="mt-0 mb-5">
+        <div class="content" contenteditable="true">
+            <h2>📝 Kai's Daily (<span id="date"></span>)</h2>
+            <br>
+            <ol >
+                <li> What did I do today?</li>
+
+                <ul>
+                    <li>none</li>
+                </ul>
+
+                <li> What problems did I have?</li>
+                <ul>
+                    <li>none</li>
+                </ul>
+                <li> What is the present bottleneck?</li>
+                <ul>
+                    <li>none</li>
+                </ul>
+                <li> What did I learn or want to share for experience?</li>
+                <ul>
+                    <li>none</li>
+                </ul>
+                <li> What do I plan to do tomorrow?</li>
+                <ul>
+                    <li>none</li>
+                </ul>
+                <li> Who needs to read this because I am working with him/her or need help?</li>
+                <ul>
+                    <li>none</li>
+                </ul>
+            </ol>
+<p>What a wonderful day. See you tomorrow.</p>
+        </div>
+        <script>
+            var dateObj = new Date();
+            var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
+            var date = ('0' + dateObj.getDate()).slice(-2);
+            var shortDate = date + '/' + month;
+            document.getElementById('date').innerHTML = shortDate;
+        </script>
+
+</body>
+
+</html>
